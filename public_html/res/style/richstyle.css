@@ -1,0 +1,81 @@
+body, nav, header, main, article, footer { padding: 0; margin: 0; }
+body { font-family: 'Fira Sans', sans-serif; font-size: 1.1em; }
+main { linear-gradient(white, pink); display: flex; flex-wrap: wrap; }
+
+
+
+
+section {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+section img { width: 200px; height: 200px; }
+
+
+
+
+div.header-items { display: flex; padding: 20px 0; }
+.m-items { margin-right: 20px; }
+nav ul li {
+    list-style-type: none;
+    display: inline;
+    text-transform: uppercase;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.47);
+    padding: 20px;
+    background: rgba(167, 36, 36, 0.16);
+    border-radius: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+nav ul li a:hover { background: rgba(103, 88, 88, 0.32); transition: background 0.5s; }
+nav ul li a:active { background: red; }
+nav { display: flex; background: linear-gradient(pink, white); flex-wrap: wrap; justify-content: space-around; margin-bottom: 50px; }
+nav img { display: flex; flex: 1; justify-content: space-around; }
+nav ul { display: flex; flex: 3; justify-content: space-around; align-items: center; height: 100%; margin: 0; }
+nav form { display: flex; flex: 1; align-items: center; }
+
+
+
+
+footer { background-color: white; font-weight: 200; font-style: italic; text-shadow: 1px 1px 1px black; }
+
+
+
+
+h1 { text-align: center; color: white; text-shadow: 2px 4px 5px black; font-size: 3.2em; letter-spacing: -1px; }
+h1, h2, h3 { font-style: italic; font-weight: bold;  font-family: 'Passion One', cursive; }
+h2 { text-align: center; }
+h2, h3 { font-size: 2.0em; }
+
+
+
+
+input { min-height: 60px; height: auto; }
+input[type=submit] {
+    background: url("../img/search-icon42.png") no-repeat;
+    background-position: center;
+    margin: 0;
+    border-radius: 0 15px 15px 0;
+    padding: 3px 20px;
+    border: 2px dotted black;
+    border-left-style: none;
+}
+input:focus { outline: none; }
+input:hover { border: 1px dotted rgba(103, 88, 88, 0.32); transition: background 0.5s; }
+input[type=search] {
+    width: 250px;
+    border: 2px dotted black;
+    border-right-style: none;
+    background: transparent;
+    border-radius: 15px 0 0 15px;
+}
+input[type=search]::placeholder {
+    color: darkgray;
+    font-size: 1.5em;
+    padding-left: 20px;
+    font-style: italic;
+}

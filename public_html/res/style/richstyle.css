@@ -1,22 +1,42 @@
 body, nav, header, main, article, footer { padding: 0; margin: 0; }
 body { font-family: 'Fira Sans', sans-serif; font-size: 1.1em; }
-main { linear-gradient(white, pink); display: flex; flex-wrap: wrap; }
+main { linear-gradient(white, pink); display: flex; justify-content: center; flex-wrap: wrap; padding: 0 50px; margin-bottom: 150px; }
 
 
 
 
-section {
+main li {
     display: flex;
-    flex: 1;
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 15px 30px 15px;
+    border: 1px solid rgba(128, 128, 128, 0.33);
+    border-radius: 60px;
+    background: rgb(241, 241, 241);
+    cursor: url("../img/pokeball32x32.png"), pointer;
 }
-section img { width: 200px; height: 200px; }
+main li:hover{
+
+}
+main li img { display: flex; border: none; border-radius: 50%; padding: 30px; }
+main li h5 { display: flex; width: 100%; justify-content: center; font-size: 1.2em; padding-bottom: 3px; }
+main li h5 a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    font-style: italic;
+    text-shadow: 2px 0px 0px rgb(0, 0, 0);
+}
+main li h5:hover { }
 
 
 
 
 div.header-items { display: flex; padding: 20px 0; }
-.m-items { margin-right: 20px; }
+.m-items { margin: 0 10px; }
+nav { display: flex; background: linear-gradient(pink, white); flex-wrap: wrap; justify-content: space-around; margin-bottom: 50px; }
+nav ul { padding: 0; flex-flow: wrap; }
 nav ul li {
     list-style-type: none;
     display: inline;
@@ -33,20 +53,20 @@ nav ul li a {
 }
 nav ul li a:hover { background: rgba(103, 88, 88, 0.32); transition: background 0.5s; }
 nav ul li a:active { background: red; }
-nav { display: flex; background: linear-gradient(pink, white); flex-wrap: wrap; justify-content: space-around; margin-bottom: 50px; }
-nav img { display: flex; flex: 1; justify-content: space-around; }
+nav img { display: flex; flex: 1; justify-content: space-around; width: 300px; height: 100%; }
 nav ul { display: flex; flex: 3; justify-content: space-around; align-items: center; height: 100%; margin: 0; }
 nav form { display: flex; flex: 1; align-items: center; }
 
 
 
 
-footer { background-color: white; font-weight: 200; font-style: italic; text-shadow: 1px 1px 1px black; }
-
-
-
-
-h1 { text-align: center; color: white; text-shadow: 2px 4px 5px black; font-size: 3.2em; letter-spacing: -1px; }
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 4px 5px black;
+    font-size: 3.2em;
+    letter-spacing: -1px;
+}
 h1, h2, h3 { font-style: italic; font-weight: bold;  font-family: 'Passion One', cursive; }
 h2 { text-align: center; }
 h2, h3 { font-size: 2.0em; }
@@ -61,21 +81,52 @@ input[type=submit] {
     margin: 0;
     border-radius: 0 15px 15px 0;
     padding: 3px 20px;
-    border: 2px dotted black;
+    border: 1px solid #762e2e;
     border-left-style: none;
 }
 input:focus { outline: none; }
 input:hover { border: 1px dotted rgba(103, 88, 88, 0.32); transition: background 0.5s; }
 input[type=search] {
     width: 250px;
-    border: 2px dotted black;
+    padding-left: 20px;
+    font-size: 23px;
+    color: #3f63ff;
+    border: 1px solid #762e2e;
     border-right-style: none;
     background: transparent;
     border-radius: 15px 0 0 15px;
 }
 input[type=search]::placeholder {
-    color: darkgray;
-    font-size: 1.5em;
-    padding-left: 20px;
+    color: rgba(169, 169, 169, 0.58);
+    font-size: 23px;
     font-style: italic;
+}
+input[type=search]::-webkit-search-cancel-button{ z-index: -1; }
+
+
+
+footer {
+    font-family: 'Oswald', sans-serif;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0px;
+    background-color: rgba(0, 0, 0, 0.56);
+    font-weight: 200;
+    border-top: 1px solid black;
+    font-size: 0.6em;
+    /*font-style: italic;
+    text-shadow: 1px 1px 1px black;*/
+}
+footer li {
+    list-style-type: none;
+    display: inline;
+    text-transform: uppercase;
+    display: flex;
+    padding: 0 15px;
+    margin: 0;
 }

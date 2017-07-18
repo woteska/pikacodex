@@ -1,7 +1,3 @@
-/**
- * Created by 212628759 on 7/18/2017.
- */
-
 let pokemons = [
     {
         "id": 1,

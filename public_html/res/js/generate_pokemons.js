@@ -36,12 +36,12 @@ function listPokemons(from_search) {
             img.setAttribute("alt", pokemons.name);
             img.setAttribute("title", pokemons.name);
 
-            //img.setAttribute("style", "background: radial-gradient(" + generateRadialBackground(pokemons) + ");");
-            img.setAttribute(
-                "style", "background: "
-                +"radial-gradient(circle at 50% 0, rgba(255,0,0,.5), rgba(255,0,0,0) 70.71%),"
-                +"radial-gradient(circle at 6.7% 75%,  rgba(0,0,255,.5), rgba(0,0,255,0) 70.71%),"
-                +"radial-gradient(circle at 93.3% 75%, rgba(0,255,0,.5), rgba(0,255,0,0) 70.71%) white;");
+            img.setAttribute("style", "background: radial-gradient(" + generateRadialBackground(pokemons) + ");");
+            // img.setAttribute(
+            //     "style", "background: "
+            //     +"radial-gradient(circle at 50% 0, rgba(255,0,0,.5), rgba(255,0,0,0) 70.71%),"
+            //     +"radial-gradient(circle at 6.7% 75%,  rgba(0,0,255,.5), rgba(0,0,255,0) 70.71%),"
+            //     +"radial-gradient(circle at 93.3% 75%, rgba(0,255,0,.5), rgba(0,255,0,0) 70.71%) white;");
 
             li.appendChild(h5);
             li.appendChild(img);
@@ -67,57 +67,25 @@ function listColors(colors) {
 
 //list meanings of colors
 listColors(colors);
-
 //list pokemons at the opening of the page
 document.querySelector("main").appendChild(listPokemons(""));
-
 //list the filtered result for searcing when key is up
 document.getElementById("search").addEventListener("keyup",
     (event) => listPokemons(document.getElementById("search").value));
 
-/*
-function getFromApi(poke) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", poke, false);
-    xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send();
-    var response = JSON.parse(xhttp.responseText);
-    return response;
-}
 
-//var api1 = getFromApi("https://pokeapi.co/api/v1/pokedex/1/");
-var api2 = getFromApi("https://pokeapi.co/api/v2/pokedex/1/");
-var api2 = api2.pokemon_entries;
 
-api2.forEach(function(ent) {
-    console.log(ent);
-});
-
-    /*class Fun {
-     sec(){
-     return document.createElement('div');
-     }
-     }
-     var fun = new Fun();
-     var sec = fun.sec();
- */
-
-/*
 for(let c in pokemonss.pokemon) {
-    console.log("{"); /*
-    console.log("\"id\": " + pokemonss.pokemon[c]["id"] + ",");
-    console.log("\"num\": \"" + pokemonss.pokemon[c]["num"] + "\",");
-    console.log("\"name\": \"" + pokemonss.pokemon[c]["name"] + "\",");
-    console.log("\"img\": \"" + pokemonss.pokemon[c]["img"] + "\",");*/
+    //console.log("{");
+    //console.log("\"id\": " + pokemonss.pokemon[c]["id"] + ",");
+    //console.log("\"num\": \"" + pokemonss.pokemon[c]["num"] + "\",");
+    //console.log("\"name\": \"" + pokemonss.pokemon[c]["name"] + "\",");
+    //console.log("\"img\": \"" + pokemonss.pokemon[c]["img"] + "\",");
     //for(let t in pokemonss.pokemon[c]["type"])
-        //var s = pokemonss.pokemon[c]["type"];
-        //console.log(pokemonss.pokemon[c]["type"][t].length);
-        //console.log(pokemonss.pokemon[c]["type"][t]);
+    //var s = pokemonss.pokemon[c]["type"];
+    //console.log(pokemonss.pokemon[c]["type"][t].length);
+    //console.log(pokemonss.pokemon[c]["type"][t]);
     // console.log("\"type\": " + pokemonss.pokemon[c]["type"] + ",");
- /*
-    console.log("},"); } */
-
-for(let c in pokemonss.pokemon) {
     delete pokemonss.pokemon[c]["height"];
     delete pokemonss.pokemon[c]["weight"];
     delete pokemonss.pokemon[c]["candy"];
@@ -127,14 +95,9 @@ for(let c in pokemonss.pokemon) {
     delete pokemonss.pokemon[c]["spawn_time"];
     delete pokemonss.pokemon[c]["multipliers"];
     delete pokemonss.pokemon[c]["weaknesses"];
-        //for(let t in pokemonss.pokemon[c]["type"])
-        //console.log(pokemonss.pokemon[c]["type"][t]);
+    //for(let t in pokemonss.pokemon[c]["type"])
+    //console.log(pokemonss.pokemon[c]["type"][t]);
     //console.log(pokemonss.pokemon[c]);
-}
-
-/*
-function foo() {
-return 1;
 }
 
 /*
@@ -161,3 +124,30 @@ return 1;
  ]
  },
 */
+
+/*
+ function getFromApi(poke) {
+ var xhttp = new XMLHttpRequest();
+ xhttp.open("GET", poke, false);
+ xhttp.setRequestHeader("Content-type", "application/json");
+ xhttp.send();
+ var response = JSON.parse(xhttp.responseText);
+ return response;
+ }
+
+ //var api1 = getFromApi("https://pokeapi.co/api/v1/pokedex/1/");
+ var api2 = getFromApi("https://pokeapi.co/api/v2/pokedex/1/");
+ var api2 = api2.pokemon_entries;
+
+ api2.forEach(function(ent) {
+ console.log(ent);
+ });
+
+ class Fun {
+ sec(){
+ return document.createElement('div');
+ }
+ }
+ var fun = new Fun();
+ var sec = fun.sec();
+ */
